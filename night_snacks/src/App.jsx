@@ -9,10 +9,10 @@ import SignUp from "./pages/SignUp";
 import PublicRoute from "./components/utils/PublicRoute";
 import { Reset } from 'styled-reset'
 
-import FourOFour from "./Pages/FourOFour"
-import Home from "./Pages/Home"
-import Index from "./Pages/Index"
-import NavBar from "./Components/NavBar"
+import FourOFour from "./pages/FourOFour"
+import Home from "./pages/Home"
+import Index from "./pages/Index"
+import NavBar from "./components/NavBar"
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
