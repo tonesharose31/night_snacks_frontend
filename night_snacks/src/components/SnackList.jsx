@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import Snack from "./Snack";
+import "./SnackList.css"
 
 const API = import.meta.env.VITE_API_URL;
 
@@ -65,7 +66,7 @@ export default function SnackList() {
     return (
         <div className="snacks-container">
             <section>
-                <Table className="edit-table" striped bordered hover>
+                <Table className="table" striped bordered hover>
                     <thead>
                         <tr className="table-row">
                             <th className="favorite">{`\u2730`}</th>

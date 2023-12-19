@@ -1,0 +1,16 @@
+.snacks-container {
+    display:flex;
+    justify-content: center;
+    padding:10px;
+  }
+
+  table th {
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .snack-container-pagination {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
