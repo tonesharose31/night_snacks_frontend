@@ -80,7 +80,7 @@ export default function SnackList() {
                             <th >Rating</th>
                             <th >Date Created </th>
                             <th >Image</th>
-                            
+
                         </tr>
                     </thead>
                     <tbody>
@@ -96,16 +96,18 @@ export default function SnackList() {
                 </Table>
                 <div className="snack-container-pagination">
                     <Button
-                        className="btn btn-secondary"
+                        className="btn btn-secondary btn-sm"
                         onClick={() => paginate(currentPage - 1)}
                         disabled={currentPage === 1}
                         variant="primary"
                     >
                         Previous
                     </Button>
-                    <span>Page {currentPage}</span>
+
+                    <div className="spacing">Page {currentPage}</div>
+
                     <Button
-                        className="btn btn-secondary"
+                        className="btn btn-secondary "
                         onClick={() => paginate(currentPage + 1)}
                         disabled={indexOfLastSnack >= allSnacks.length}
                         variant="primary"

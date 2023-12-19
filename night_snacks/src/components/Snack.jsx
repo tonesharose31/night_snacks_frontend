@@ -12,13 +12,11 @@ export default function Snack({ snack }) {
             <td>{snack.calories}</td>
             <td>{snack.rating}</td>
             <td>{snack.creation_date}</td>
-
             <td>
                 <a href={snack.image} target="_blank" rel="noopener noreferrer">
                     <img
                         src={snack.image}
                         alt={`Image of ${snack.name}`}
-                        style={{ height: "50px" }}
                     />
                 </a>
             </td>
