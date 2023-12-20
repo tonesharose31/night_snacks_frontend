@@ -15,9 +15,10 @@ import {
 } from '../styles/loginElements';
 const API = import.meta.env.VITE_API_URL
 
-export default function SnackEditForm() {
+export default function SnackNewForm() {
     let { resource_id } = useParams()
     const [snack, setSnack] = useState({
+        user_id: 1,
         name: "",
         image: "",
         category: "",
@@ -27,17 +28,9 @@ export default function SnackEditForm() {
     })
     const navigate = useNavigate()
 
-    const handleInputChange = (e) => {
-        const { name, value, type, checked } = e.target
-        setSnack({
-            ...snack,
-            [name]: type === "checkbox" ? checked : value,
-        })
-    }
-
-    const updateSnack = () => {
-        fetch(`${API}/snacks/${resource_id}`, {
-            method: "PUT",
+    const addSnack = () => {
+        fetch(`${API}/snacks`, {
+            method: "POST",
             body: JSON.stringify(snack),
             headers: {
                 "Content-Type": "application/json",
@@ -52,8 +45,8 @@ export default function SnackEditForm() {
                     throw new Error(data.err)
                 }
                 else {
-                    alert(`Snack ${data.name} successfully updated!`)
-                    navigate(`/snacks/${resource_id}`)
+                    alert(`Snack ${data.name} succesfully created`)
+                    navigate(`/snacks/${data.resource_id}`)
                 }
             })
             .catch((error) => {
@@ -62,18 +55,18 @@ export default function SnackEditForm() {
             })
     }
 
-    useEffect(() => {
-        fetch(`${API}/snacks/${resource_id}`)
-            .then((response) => response.json())
-            .then((responseJSON) => {
-                setSnack(responseJSON)
-            })
-            .catch((error) => console.error("Error:", error))
-    }, [resource_id])
+    const handleInputChange = (e) => {
+        const { name, value, type, checked } = e.target
+        setSnack({
+            ...snack,
+            [name]: type === "checkbox" ? checked : value,
+        })
+    }
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        updateSnack()
+        addSnack()
     }
 
     const handleBack = () => {
@@ -84,7 +77,7 @@ export default function SnackEditForm() {
         <div className="form-edit-snack">
             <LoginBackground3 >
                 <LoginLabel>
-                    <LoginHeaderV3>Edit Snack</LoginHeaderV3>
+                    <LoginHeaderV3>New Snack</LoginHeaderV3>
                 </LoginLabel>
 
                 <Form className="form" noValidate onSubmit={handleSubmit}>
@@ -164,7 +157,7 @@ export default function SnackEditForm() {
                         />
                     </Form.Group>
                     <LoginButton6 className="btn btn-secondary btn-sm" variant="primary" type="submit">
-                        Update Snack
+                        Create Snack
                     </LoginButton6>
                     <LoginButton6 className="btn btn-secondary btn-sm" variant="primary" onClick={handleBack} type="submit">
                         Back

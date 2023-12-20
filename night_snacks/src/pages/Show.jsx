@@ -1,5 +1,4 @@
 import SnackDetails from "../components/SnackDetails"
-import "./Show.css"
 
 function Show(){
     return (

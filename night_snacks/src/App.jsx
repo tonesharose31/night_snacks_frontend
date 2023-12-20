@@ -13,6 +13,7 @@ import FourOFour from "./pages/FourOFour"
 import Home from "./pages/Home"
 import Index from "./pages/Index"
 import Show from "./pages/Show"
+import New from "./pages/New"
 import Edit from "./pages/Edit"
 import NavBar from "./components/NavBar"
 import './App.css'
@@ -37,6 +38,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/snacks" element={<Index />} />
+                <Route path="/snacks/new" element={<New />} />
                 <Route path="/snacks/:resource_id" element={<Show />} />
                 <Route path="/snacks/:resource_id/edit" element={<Edit />} />
 

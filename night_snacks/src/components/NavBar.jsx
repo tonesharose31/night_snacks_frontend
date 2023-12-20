@@ -11,6 +11,8 @@ export default function NavBar() {
 
                         <Link to="/snacks"> Snacks </Link>
 
+                        <Link to="/snacks/new"> New Snack </Link>
+
                         <Link to="/login"> Login </Link>
 
                         <Link to="/signup"> Sign Up </Link>

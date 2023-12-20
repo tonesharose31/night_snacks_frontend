@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react"
 import { Link, useParams, useNavigate } from "react-router-dom"
-import Button from "react-bootstrap/Button"
 import React from 'react'
 import "./SnackDetails.css"
 import {
     LoginButton5,
-} from '../styles/loginElements';
+} from '../styles/loginElements'
 const API = import.meta.env.VITE_API_URL
 
 function SnackDetails() {

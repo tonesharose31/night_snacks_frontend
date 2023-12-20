@@ -1,27 +1,22 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import Table from "react-bootstrap/Table";
-import Button from "react-bootstrap/Button";
-import Snack from "./Snack";
+import React, { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
+import Table from "react-bootstrap/Table"
+import Snack from "./Snack"
 import "./SnackList.css"
 import {
-    LoginBackground2,
-    LoginHeader,
-    LoginLabel,
-    FormInput,
     LoginButton2,
     LoginButton3,
     LoginButton4,
-} from '../styles/loginElements';
+} from '../styles/loginElements'
 
-const API = import.meta.env.VITE_API_URL;
+const API = import.meta.env.VITE_API_URL
 
 export default function SnackList() {
-    const [allSnacks, setAllSnacks] = useState([]);
-    const [currentPage, setCurrentPage] = useState(1);
-    const [snacksPerPage, setSnacksPerPage] = useState(10);
-    const [snacksOrder, setSnacksOrder] = useState(false);
-    const navigate = useNavigate();
+    const [allSnacks, setAllSnacks] = useState([])
+    const [currentPage, setCurrentPage] = useState(1)
+    const [snacksPerPage, setSnacksPerPage] = useState(10)
+    const [snacksOrder, setSnacksOrder] = useState(false)
+    const navigate = useNavigate()
     const [categoryOrder, setCategoryOrder] = useState(false)
     const [caloriesOrder, setCaloriesOrder] = useState(false)
     const [ratingOrder, setRatingOrder] = useState(false)
@@ -191,18 +186,18 @@ export default function SnackList() {
         fetch(`${API}/snacks`)
             .then((response) => response.json())
             .then((snacks) => {
-                setAllSnacks(snacks);
+                setAllSnacks(snacks)
             })
             .catch((error) => {
-                console.error("Error fetching data: ", error);
-            });
-    }, []);
+                console.error("Error fetching data: ", error)
+            })
+    }, [])
 
-    const indexOfLastSnack = currentPage * snacksPerPage;
-    const indexOfFirstSnack = indexOfLastSnack - snacksPerPage;
-    const currentSnacks = allSnacks.slice(indexOfFirstSnack, indexOfLastSnack);
+    const indexOfLastSnack = currentPage * snacksPerPage
+    const indexOfFirstSnack = indexOfLastSnack - snacksPerPage
+    const currentSnacks = allSnacks.slice(indexOfFirstSnack, indexOfLastSnack)
 
-    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+    const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
     return (
         <div className="snacks-container">
@@ -248,7 +243,7 @@ export default function SnackList() {
                                     key={snack.resource_id}
                                     snack={snack}
                                 />
-                            );
+                            )
                         })}
                     </tbody>
                 </Table>
@@ -275,5 +270,5 @@ export default function SnackList() {
                 </div>
             </section>
         </div>
-    );
+    )
 }
