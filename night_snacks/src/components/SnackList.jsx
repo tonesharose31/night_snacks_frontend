@@ -65,11 +65,11 @@ export default function SnackList() {
 
     return (
         <div className="snacks-container">
-            <section>
-                <Table className="table" striped bordered hover>
+            <section className="wrap">
+                <Table className="table table-dark table-responsive" striped bordered hover>
                     <thead>
                         <tr className="table-row">
-                            <th className="favorite">{`\u2730`}</th>
+                            <th className="favorite">{`\u2B50`}</th>
                             <th className="name">
                                 <Button className="atlBtnColor-sort btn-secondary btn-sm" onClick={handleSortSnacks}>
                                     Snack Name {` \u21f3`}

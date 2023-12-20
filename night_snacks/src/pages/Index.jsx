@@ -1,4 +1,5 @@
 import SnackList from "../components/SnackList"
+import "./Index.css"
 
 function Index() {
   return (

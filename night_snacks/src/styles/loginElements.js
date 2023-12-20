@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const LoginWrapper = styled.div`
+  display: table;
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 99vw;
+  height: 125vh;
   background: linear-gradient(116.82deg, #FF71A2 0%, #FFC682 100%);
 
   @media screen and (max-width: 480px) {

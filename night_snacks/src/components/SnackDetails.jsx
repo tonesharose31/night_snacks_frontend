@@ -43,32 +43,37 @@ function SnackDetails() {
 
     return (
         <article className="top">
-            <table className=" table table-bordered table-responsive ">
+            <table className=" table table-dark table-striped table-hover table-responsive ">
                 <tbody>
                     <tr className="fav">
-                        <th colSpan="4"> Favorite: {snack.is_favorite ? `\u2730` : ""} </th>
+                        <td colSpan="4"> Favorite: {snack.is_favorite ? `\u2B50` : `\u274C`} </td>
                     </tr>
                     <tr className="Name">
-                        <th colSpan="4"> Name: {snack.name} </th>
+                        <td colSpan="4"> Name: {snack.name} </td>
                     </tr>
                     <tr className="category">
-                        <th colSpan="4"> Category: {snack.category} </th>
+                        <td colSpan="4"> Category: {snack.category} </td>
                     </tr>
                     <tr className="calories">
-                        <th colSpan="4"> Calories: {snack.calories} </th>
+                        <td colSpan="4"> Calories: {snack.calories} </td>
                     </tr>
                     <tr className="rating">
-                        <th colSpan="4"> Rating: {snack.rating} </th>
+                        <td colSpan="4"> Rating: {snack.rating} </td>
                     </tr>
                 </tbody>
                 <tbody >
-                    <tr >
-                        <th colSpan="4">
-                            <img  
+                    <tr  >
+                        <td colSpan="4">
+                            <img
                                 src={snack.image}
                                 alt={`Image of ${snack.name}`}
+                                style={{
+                                    height: "250px",
+                                    width: "250px",
+                                    float: "center"
+                                }}
                             />
-                        </th>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -76,6 +81,9 @@ function SnackDetails() {
                 <button className="btn btn-secondary btn-sm" onClick={handleDelete}>
                     Delete
                 </button>
+                <Button className="btn btn-secondary btn-sm" onClick={() => navigate(-1)}>
+                    <span>Back</span>
+                </Button>
                 <button disabled className="btn btn-secondary btn-sm" onClick={() => navigate(`/snacks/${resource_id}/edit`)}>
                     Edit Artist
                 </button>

@@ -6,7 +6,8 @@
   }
 
   table th {
-    text-align: left;
+    font-size: 25px;
+    text-align: center;
     font-weight: bold;
   }
 
@@ -22,5 +23,16 @@
 }
 
 img {
-    height: 60px;
+  float: center;
+  width:  100px;
+  height: 100px;
+  object-fit: cover;
 }
+
+th:first-of-type {
+  border-top-left-radius: 15px;
+}
+th:last-of-type {
+  border-top-right-radius: 15px;
+}
+

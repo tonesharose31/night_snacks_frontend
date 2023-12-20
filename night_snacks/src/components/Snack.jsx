@@ -4,7 +4,7 @@ import React from "react"
 export default function Snack({ snack }) {
     return (
         <tr>
-            <td>{snack.is_favorite?`\u2730`:""}</td>
+            <td>{snack.is_favorite?`\u2B50`:""}</td>
             <td>
                 <Link to={`/snacks/${snack.resource_id}`}>{snack.name}</Link>
             </td>
