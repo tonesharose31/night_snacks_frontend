@@ -15,23 +15,21 @@ import {
 } from '../styles/loginElements';
 const API = import.meta.env.VITE_API_URL
 
-export default function SnackNewForm() {
-
-    const [snack, setSnack] = useState({
-        user_id: 1,
-        name: "",
-        image: "",
-        category: "",
-        calories: 0,
-        rating: 0,
+export default function SignUpForm() {
+    const [user, setUser] = useState({
+        firstname: "",
+        lastname: "",
+        username: "",
+        email: "",
+        password_hash: "",
         is_favorite: false
     })
     const navigate = useNavigate()
 
-    const addSnack = () => {
-        fetch(`${API}/snacks`, {
+    const addUser = () => {
+        fetch(`${API}/users`, {
             method: "POST",
-            body: JSON.stringify(snack),
+            body: JSON.stringify(user),
             headers: {
                 "Content-Type": "application/json",
             },
@@ -45,8 +43,8 @@ export default function SnackNewForm() {
                     throw new Error(data.err)
                 }
                 else {
-                    alert(`Snack ${data.name} succesfully created`)
-                    navigate(`/snacks/${data.resource_id}`)
+                    alert(`User ${data.username} succesfully created`)
+                    navigate(`/users/${data.user_id}`)
                 }
             })
             .catch((error) => {
@@ -57,8 +55,8 @@ export default function SnackNewForm() {
 
     const handleInputChange = (e) => {
         const { name, value, type, checked } = e.target
-        setSnack({
-            ...snack,
+        setUser({
+            ...user,
             [name]: type === "checkbox" ? checked : value,
         })
     }
@@ -66,95 +64,90 @@ export default function SnackNewForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        addSnack()
+        addUser()
     }
 
+
     return (
-        <div className="form-edit-snack">
+        <div className="form-new-user">
             <LoginBackground3 >
                 <LoginLabel>
-                    <LoginHeaderV3>New Snack</LoginHeaderV3>
+                    <LoginHeaderV3>Sign Up</LoginHeaderV3>
                 </LoginLabel>
 
                 <Form className="form" noValidate onSubmit={handleSubmit}>
                     <Row className="mb-3">
-                        <Form.Group as={Col} controlId="name">
-                            <LoginHeaderV2>Name</LoginHeaderV2>
+                        <Form.Group as={Col} controlId="username">
+                            <LoginHeaderV2>Username</LoginHeaderV2>
                             <Form.Control
                                 className="useLoginStyle"
                                 required
-                                name="name"
+                                name="username"
                                 type="text"
-                                placeholder="snack name"
-                                value={snack.name}
+                                placeholder="username"
+                                value={user.username}
                                 onChange={handleInputChange}
                             />
                         </Form.Group>
                     </Row>
                     <Row className="mb-3">
-                        <Form.Group as={Col} controlId="image">
-                            <LoginHeaderV2>Image Link</LoginHeaderV2>
+                        <Form.Group as={Col} controlId="email">
+                            <LoginHeaderV2>Email</LoginHeaderV2>
                             <Form.Control
-                            className="useLoginStyle"
-                                name="image"
+                                className="useLoginStyle"
+                                name="email"
                                 type="text"
-                                placeholder="Image URL"
-                                value={snack.image}
+                                placeholder="@"
+                                value={user.email}
                                 onChange={handleInputChange}
                             />
                         </Form.Group>
                     </Row>
                     <Row className="mb-3">
-                        <Form.Group as={Col} controlId="category">
-                            <LoginHeaderV2>Category</LoginHeaderV2>
+                        <Form.Group as={Col} controlId="firstname">
+                            <LoginHeaderV2>First Name</LoginHeaderV2>
                             <Form.Control
-                            className="useLoginStyle"
-                                name="category"
+                                className="useLoginStyle"
+                                name="firstname"
                                 type="text"
-                                placeholder="food group category"
-                                value={snack.category}
+                                placeholder="first name"
+                                value={user.firstname}
                                 onChange={handleInputChange}
                             />
                         </Form.Group>
                     </Row>
                     <Row className="mb-3">
-                        <Form.Group as={Col} controlId="calories">
-                            <LoginHeaderV2>Calories</LoginHeaderV2>
+                        <Form.Group as={Col} controlId="lastname">
+                            <LoginHeaderV2>Last Name</LoginHeaderV2>
                             <Form.Control
-                            className="useLoginStyle"
-                                name="calories"
-                                type="number"
-                                placeholder="calories"
-                                value={snack.calories}
+                                className="useLoginStyle"
+                                name="lastname"
+                                type="text"
+                                placeholder="last name"
+                                value={user.lastname}
                                 onChange={handleInputChange}
                             />
                         </Form.Group>
                     </Row>
                     <Row className="mb-3">
-                        <Form.Group as={Col} controlId="rating">
-                            <LoginHeaderV2>Rating</LoginHeaderV2>
+                        <Form.Group as={Col} controlId="password_hash">
+                            <LoginHeaderV2>Password</LoginHeaderV2>
                             <Form.Control
-                            className="useLoginStyle"
-                                name="rating"
-                                type="number"
-                                placeholder="rating"
-                                value={snack.rating}
+                                className="useLoginStyle"
+                                name="password_hash"
+                                type="text"
+                                placeholder="password"
+                                value={user.password_hash}
                                 onChange={handleInputChange}
                             />
                         </Form.Group>
                     </Row>
-                    <Form.Group className="mb-3" controlId="is_favorite">
-                        <LoginHeaderV2>Is Favorite</LoginHeaderV2>
-                        <Form.Check
-                            type="checkbox"
-                            name="is_favorite"
-                            onChange={handleInputChange}
-                            checked={snack.is_favorite}
-                        />
-                    </Form.Group>
+                    <br></br>
+                    <br></br>
                     <LoginButton7 className="btn btn-secondary btn-sm" variant="primary" type="submit">
-                        Create Snack
+                        Create User
                     </LoginButton7>
+
                 </Form>
             </LoginBackground3>
         </div>

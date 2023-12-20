@@ -17,9 +17,9 @@ export default function NavBar() {
 
                         <Link to="/signup"> Sign Up </Link>
 
-                        <Link to="/user"> User </Link>
+                        {/* testing */}
+                        <Link to="/users"> User </Link>
 
-                        {/* <Link to="/snacks/new">New Snack</Link> */}
                     </div>
                     <span className="navbar-text">
                         Night Snacks

@@ -1,11 +1,16 @@
-const SignUp = () => {
+
+import SignUpForm from "../components/SignUpForm"
+
+function SignUp() {
     return (
-        <div>
-            Sign up works!#!@!
+        <div >
+            <SignUpForm />
         </div>
-    );
+    )
 }
 
-export default SignUp;
+export default SignUp
+
+
 
 

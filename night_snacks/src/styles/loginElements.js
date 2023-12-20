@@ -348,3 +348,22 @@ export const LoginButton6 = styled.button`
       outline: none;
   }
 `;
+
+export const LoginButton7 = styled.button`
+  width: 330px;
+  height: 50px;
+  background: #FF5B90;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+  cursor: pointer;
+
+  &:focus{
+      outline: none;
+  }
+`;

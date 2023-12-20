@@ -53,7 +53,7 @@ function App() {
                 {/* ROUTE FOR "/" WITH REDIRECT TO LOGIN ROUTE */}
 
                 {/* ROUTE TO USER PROFILE ROUTE WITH WILDCARD MATCHER */}
-
+                <Route path="/users/:user_id" element={<UserPortal />} />
 
 
                 <Route path="*" element={<FourOFour />} />
