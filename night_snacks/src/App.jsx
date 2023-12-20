@@ -13,6 +13,7 @@ import FourOFour from "./pages/FourOFour"
 import Home from "./pages/Home"
 import Index from "./pages/Index"
 import Show from "./pages/Show"
+import Edit from "./pages/Edit"
 import NavBar from "./components/NavBar"
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -37,7 +38,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/snacks" element={<Index />} />
                 <Route path="/snacks/:resource_id" element={<Show />} />
-
+                <Route path="/snacks/:resource_id/edit" element={<Edit />} />
 
 
                 {/* PUBLIC ROUTE FOR LOGIN */}

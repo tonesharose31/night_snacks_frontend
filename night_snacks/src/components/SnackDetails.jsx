@@ -84,8 +84,8 @@ function SnackDetails() {
                 <Button className="btn btn-secondary btn-sm" onClick={() => navigate(-1)}>
                     <span>Back</span>
                 </Button>
-                <button disabled className="btn btn-secondary btn-sm" onClick={() => navigate(`/snacks/${resource_id}/edit`)}>
-                    Edit Artist
+                <button className="btn btn-secondary btn-sm" onClick={() => navigate(`/snacks/${resource_id}/edit`)}>
+                    Edit Snack
                 </button>
             </div>
             <br></br>

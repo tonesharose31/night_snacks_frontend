@@ -39,10 +39,39 @@ export const LoginBackground = styled.form`
   }
 `;
 
+export const LoginBackground2 = styled.form`
+
+  position: absolute;
+  width: 560px;
+  height: 680px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #3a4664;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0px 10px 10px 2px rgba(51, 51, 51, 0.1);
+  border-radius: 10px;
+  padding: 0 0 77px 0;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 480px) {
+    position: fixed;
+    width: 90%;
+    height: auto;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+  }
+`;
+
 export const LoginLabel = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 
   @media screen and (max-width: 480px) {
     position: absolute;
@@ -53,7 +82,7 @@ export const LoginLabel = styled.div`
 export const LoginHeader = styled.h2`
   width: 259px;
   height: 30px;
-  font-family: Roboto;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
@@ -141,10 +170,67 @@ export const LoginButton = styled.button`
   background: #FF5B90;
   border: none;
   border-radius: 10px;
-  font-family: Roboto;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+  cursor: pointer;
+
+  &:focus{
+      outline: none;
+  }
+`;
+
+export const LoginButton2 = styled.button`
+  width: 150px;
+  height: 50px;
+  background: #FF5B90;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+  cursor: pointer;
+
+  &:focus{
+      outline: none;
+  }
+`;
+
+export const LoginButton3 = styled.button`
+  width: 125px;
+  height: 40px;
+  background: #FF5B90;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 23px;
+  color: #FFFFFF;
+  cursor: pointer;
+
+  &:focus{
+      outline: none;
+  }
+`;
+
+export const LoginButton4 = styled.button`
+  width: 50px;
+  height: 40px;
+  background: #FF5B90;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
   line-height: 23px;
   color: #FFFFFF;
   cursor: pointer;
