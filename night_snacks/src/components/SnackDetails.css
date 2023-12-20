@@ -1,0 +1,8 @@
+.top {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+  }

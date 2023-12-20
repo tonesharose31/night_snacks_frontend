@@ -11,6 +11,12 @@ export default function NavBar() {
 
                         <Link to="/snacks"> Snacks </Link>
 
+                        <Link to="/login"> Login </Link>
+
+                        <Link to="/signup"> Sign Up </Link>
+
+                        <Link to="/user"> User </Link>
+
                         {/* <Link to="/snacks/new">New Snack</Link> */}
                     </div>
                     <span className="navbar-text">
