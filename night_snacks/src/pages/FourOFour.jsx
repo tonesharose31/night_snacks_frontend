@@ -1,12 +1,22 @@
 
+import {
+    LoginWrapper,
+    LoginBackground4,
+    LoginHeaderV4,
+    LoginLabel
+} from '../styles/loginElements'
 
 export default function FourOFour() {
 
     return (
-        <div>
-            <div className="fourOfour-message">
-                Sorry, no page found
-            </div>
-        </div>
+        <LoginWrapper>
+            <LoginBackground4 >
+                <LoginLabel>
+                    <LoginHeaderV4>
+                        <h1>Sorry, no page found</h1>  
+                    </LoginHeaderV4>
+                </LoginLabel>
+            </LoginBackground4>
+        </LoginWrapper>
     )
 }
