@@ -19,7 +19,7 @@ export const LoginBackground = styled.form`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #FFFFFF;
+  background: #3a4664;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -60,7 +60,7 @@ export const LoginHeader = styled.h2`
   line-height: 30px;
   text-align: center;
   margin-bottom: 15px;
-  color: #000000;
+  color: #f2f2f2;
 
   @media screen and (max-width: 480px) {
     width: 299px;
