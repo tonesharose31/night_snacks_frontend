@@ -67,6 +67,34 @@ export const LoginBackground2 = styled.form`
   }
 `;
 
+export const LoginBackground3 = styled.div`
+
+  position: absolute;
+  width: 560px;
+  height: 680px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #3a4664;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0px 10px 10px 2px rgba(51, 51, 51, 0.1);
+  border-radius: 10px;
+  padding: 0 0 77px 0;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 480px) {
+    position: fixed;
+    width: 90%;
+    height: auto;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+  }
+`;
+
 export const LoginLabel = styled.div`
   display: flex;
   flex-direction: column;
@@ -89,6 +117,49 @@ export const LoginHeader = styled.h2`
   line-height: 30px;
   text-align: center;
   margin-bottom: 15px;
+  color: #f2f2f2;
+
+  @media screen and (max-width: 480px) {
+    width: 299px;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+`;
+
+export const LoginHeaderV3 = styled.h2`
+  width: 259px;
+  height: 25px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  color: #f2f2f2;
+
+  @media screen and (max-width: 480px) {
+    width: 299px;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+`;
+
+export const LoginHeaderV2 = styled.h4`
+  width: 259px;
+  height: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 30px;
+  text-align: left;
+  
   color: #f2f2f2;
 
   @media screen and (max-width: 480px) {
@@ -231,6 +302,44 @@ export const LoginButton4 = styled.button`
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
+  line-height: 23px;
+  color: #FFFFFF;
+  cursor: pointer;
+
+  &:focus{
+      outline: none;
+  }
+`;
+
+export const LoginButton5 = styled.button`
+  width: 125px;
+  height: 40px;
+  background: #FF5B90;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+  cursor: pointer;
+
+  &:focus{
+      outline: none;
+  }
+`;
+
+export const LoginButton6 = styled.button`
+  width: 170px;
+  height: 50px;
+  background: #FF5B90;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
   line-height: 23px;
   color: #FFFFFF;
   cursor: pointer;

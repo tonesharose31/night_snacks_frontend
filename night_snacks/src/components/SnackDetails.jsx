@@ -3,6 +3,9 @@ import { Link, useParams, useNavigate } from "react-router-dom"
 import Button from "react-bootstrap/Button"
 import React from 'react'
 import "./SnackDetails.css"
+import {
+    LoginButton5,
+} from '../styles/loginElements';
 const API = import.meta.env.VITE_API_URL
 
 function SnackDetails() {
@@ -78,15 +81,15 @@ function SnackDetails() {
                 </tbody>
             </table>
             <div className="show-navigation">
-                <button className="btn btn-secondary btn-sm" onClick={handleDelete}>
+                <LoginButton5 className="btn btn-secondary btn-sm" onClick={handleDelete}>
                     Delete
-                </button>
-                <Button className="btn btn-secondary btn-sm" onClick={() => navigate(-1)}>
+                </LoginButton5>
+                <LoginButton5 className="btn btn-secondary btn-sm" onClick={() => navigate(-1)}>
                     <span>Back</span>
-                </Button>
-                <button className="btn btn-secondary btn-sm" onClick={() => navigate(`/snacks/${resource_id}/edit`)}>
+                </LoginButton5>
+                <LoginButton5 className="btn btn-secondary btn-sm" onClick={() => navigate(`/snacks/${resource_id}/edit`)}>
                     Edit Snack
-                </button>
+                </LoginButton5>
             </div>
             <br></br>
         </article>
